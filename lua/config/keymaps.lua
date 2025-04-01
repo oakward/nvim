@@ -19,8 +19,12 @@ end, { silent = true, desc = "Git add all" })
 
 vim.keymap.set("n", "<M-,>", "A,<CR>", { desc = ", NL" })
 vim.keymap.set("n", "<M-;>", "A;<CR>", { desc = "; NL" })
-vim.keymap.set("n", "<M-l>", "A<CR>", { desc = "NL" })
 
 vim.keymap.set("i", "<M-,>", "<End>,<CR>", { desc = ", NL" })
 vim.keymap.set("i", "<M-;>", "<End>;<CR>", { desc = "; NL" })
-vim.keymap.set("i", "<M-l>", "<End><CR>", { desc = "NL" })
+
+vim.keymap.set("n", "<leader>mm", 've"0p', { desc = "replace in word" })
+vim.keymap.set("n", "<leader>mb", 'bve"0p', { desc = "replace in word" })
+
+vim.keymap.set("i", "<M-.>", "<End>,", { desc = ", NL" })
+vim.keymap.set("i", "<M->>", "<End>,<Esc>", { desc = ", NL" })
